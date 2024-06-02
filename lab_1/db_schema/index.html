@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../main/">
+        <link rel="prev" href="../task/">
       
       
         <link rel="next" href="../migrations/">
@@ -245,7 +245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../main/" class="md-nav__link">
+      <a href="../task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,6 +477,127 @@
   
 
     
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная работа №3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab_3/task_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab_3/task_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab_3/task_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab_3/conclusion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Вывод
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -512,22 +633,30 @@
 
 <h1 id="_1">Схема базы данных</h1>
 <p>Для проектирования модели базы данных, согласно условиям лабораторной работы, была сформирована следующая схема:</p>
-<p><img alt="Схема базы данных" src="../img/db_schema.jpeg" /></p>
+<p><img alt="Схема базы данных" src="../images/db_schema.jpeg" /></p>
 <p>В базе данных представлено 5 сущностей:</p>
 <ul>
-<li>Участники хакатона</li>
-<li>Команды</li>
-<li>Хакатоны</li>
-<li>Задачи</li>
-<li>Решения</li>
+<li>
+<p>Участники хакатона</p>
+</li>
+<li>
+<p>Команды</p>
+</li>
+<li>
+<p>Хакатоны</p>
+</li>
+<li>
+<p>Задачи</p>
+</li>
+<li>
+<p>Решения</p>
+</li>
 </ul>
-<p>Связь many-to-many представлена между командами и хакатонами. Для них создана промежуточная таблица, которая хранит 
-в себе id команды, id хакатона и дату регистрации на хакатон.</p>
-<p>Также дополнительно в базу данных включена таблица <code>User</code> для реализации авторизации и аутентификации пользователей.</p>
-<p>В FastAPI-проекте были созданы файлы <code>schemas.py</code> для реализации базовых SQLModel-классов для запросов и 
-последующего наследования, а также <code>models.py</code> для создания таблиц в базе данных.</p>
+<p>Связь many-to-many представлена между командами и хакатонами. Для них создана промежуточная таблица, которая хранит в себе id команды, id хакатона и дату регистрации на хакатон.</p>
+<p>Также дополнительно в базу данных включена таблица User для реализации авторизации и аутентификации пользователей.</p>
+<p>В FastAPI-проекте были созданы файлы schemas.py для реализации базовых SQLModel-классов для запросов и последующего наследования, а также models.py для создания таблиц в базе данных.</p>
 <details class="note">
-<summary>schemas.py</summary>
+<summary>schema.py</summary>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">sqlmodel</span> <span class="kn">import</span> <span class="n">SQLModel</span>

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../endpoints/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../../lab_2/task_1/">
+        <link rel="next" href="../db_schema/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Вывод - Лабораторные работы</title>
+        <title>Задание - Лабораторные работы</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#no1-fastapi" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Вывод
+              Задание
             
           </span>
         </div>
@@ -243,9 +243,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../task/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Задание
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -254,6 +274,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Условие задания
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Практики
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -343,18 +397,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../conclusion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -363,7 +408,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -618,6 +662,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Условие задания
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Практики
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -631,9 +697,30 @@
                   
 
 
-<h1 id="_1">Вывод</h1>
-<p>В данной лабораторной работе я познакомился с новым фреймворком для создания веб-приложений FastAPI. Мощный, лёгкий 
-и гибкий, он позволяет создавать индивидуальные веб-приложения. В процессе работы я создал простое веб-приложение, которое позволило отработать навыки работы в данном фреймворке.</p>
+<h1 id="no1-fastapi">Лабораторная работа №1. Реализация серверного приложения FastAPI</h1>
+<h2 id="_1">Условие задания</h2>
+<p>Задача состоит в разработке программной системы, которая будет использоваться для организации и проведения хакатонов. Хакатон — это соревнование, на котором участники, как правило, программисты, дизайнеры и бизнес-специалисты, работают над проектами в течение определенного времени, решая поставленные задачи или разрабатывая новые идеи. Система должна предоставлять следующий функционал:</p>
+<ul>
+<li>
+<p><strong>Регистрация участников</strong>: Участники должны иметь возможность зарегистрироваться на хакатон, указав свои данные (имя, 
+адрес электронной почты, контактный номер и т. д.). После регистрации участники должны получить подтверждение от организаторов.</p>
+</li>
+<li>
+<p><strong>Формирование команд</strong>: Участники должны иметь возможность создавать команды или присоединяться к уже существующим. 
+Команды могут состоять из участников с различными навыками (программирование, дизайн, маркетинг и т. д.).</p>
+</li>
+<li>
+<p><strong>Публикация задач</strong>: Организаторы хакатона должны иметь возможность публиковать задачи или проекты, над которыми будут 
+работать участники. Каждая задача должна содержать описание, требования и критерии оценки.</p>
+</li>
+<li>
+<p><strong>Оценка работ</strong>: Участники должны иметь возможность загружать свои работы и прототипы для оценки.</p>
+</li>
+</ul>
+<h2 id="_2">Практики</h2>
+<p><a href="https://github.com/TonikX/ITMO_ICT_WebDevelopment_tools_2023-2024/pull/3/commits/11981630902f19e7600e53d7d244fae522515d38">Ссылка на коммит с практикой 1</a></p>
+<p><a href="https://github.com/TonikX/ITMO_ICT_WebDevelopment_tools_2023-2024/pull/3/commits/91b81ee6dea150dd8b30e4e7a35b23d802f67657">Ссылка на коммит с практикой 2</a></p>
+<p><a href="https://github.com/TonikX/ITMO_ICT_WebDevelopment_tools_2023-2024/pull/3/commits/1ccb3f00c591b297037722539d30063901e2dd3f">Ссылка на коммит с практикой 3</a></p>
 
 
 
